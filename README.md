@@ -38,7 +38,7 @@ Translation of some papers on big data and databases
 [GFS论文翻译](https://github.com/houmingyuan/Google-MapReduce-GFS-BigTable/blob/master/Google-Bigtable中文版_1.0.pdf)
 
 ## Bigtable
-
+[Bigtable原文](https://github.com/houmingyuan/Google-MapReduce-GFS-BigTable/blob/master/Bigtable%20A%20Distributed%20Storage%20System%20for%20Structured%20Data.pdf)
 [Bigtable论文翻译](https://github.com/houmingyuan/Google-MapReduce-GFS-BigTable/blob/master/Google-Bigtable中文版_1.0.pdf)
 
 ## MapReduce
