@@ -109,7 +109,7 @@ Translation of some papers on big data and databases
 
 
 
-**Thank you for your help**
+## **Thank you for your help**
 
 [OneSizeFitsQuorum](https://github.com/OneSizeFitsQuorum)
 
