@@ -104,8 +104,6 @@ Translation of some papers on big data and databases
 
 
 
-
-
 ## **Thank you for your help**
 
 [OneSizeFitsQuorum](https://github.com/OneSizeFitsQuorum)
@@ -114,5 +112,9 @@ Translation of some papers on big data and databases
 
 [victorchu](https://blog.victorchu.info/)
 
+[maemual](https://github.com/maemual)
 
-## **有问题欢迎提PR和issue**
+
+
+
+## **有问题欢迎提PR和issue**，不定时更新
