@@ -2,6 +2,12 @@
 
 Translation of some papers on big data and databases
 
+## Orca
+
+[Orca原文](https://tanzu.vmware.com/content/white-papers/orca-a-modular-query-optimizer-architecture-for-big-data)
+
+[Orca中文翻译](https://github.com/caicancai/paper_reading_CN/tree/main/orca)
+
 ## Calcite
 [Calcite原文](https://arxiv.org/pdf/1802.10233.pdf)
 
@@ -45,6 +51,10 @@ Translation of some papers on big data and databases
 ## MapReduce
 
 [MapReduce论文翻译](https://github.com/houmingyuan/Google-MapReduce-GFS-BigTable/blob/master/Google-MapReduce中文版_1.0.pdf)
+
+
+
+
 
 
 ## **有问题欢迎提PR和issue**
