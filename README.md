@@ -4,7 +4,7 @@ Translation of some papers on big data and databases
 
 ## Database
 
-### Orca
+### Orca(待校验)
 
 [Orca原文](https://tanzu.vmware.com/content/white-papers/orca-a-modular-query-optimizer-architecture-for-big-data)
 
