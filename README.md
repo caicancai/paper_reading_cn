@@ -106,3 +106,13 @@ Translation of some papers on big data and databases
 
 
 ## **有问题欢迎提PR和issue**
+
+
+
+**Thank you for your help**
+
+[OneSizeFitsQuorum](https://github.com/OneSizeFitsQuorum)
+
+[mapleFU ](https://github.com/mapleFU)
+
+[victorchu](https://blog.victorchu.info/)
