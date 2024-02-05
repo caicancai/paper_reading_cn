@@ -10,11 +10,11 @@ Translation of some papers on big data and databases
 
 [Orca中文翻译](https://github.com/caicancai/paper_reading_CN/tree/main/orca)
 
-### X100(待校验)
+### X100
 
 [X100原文](https://www.cidrdb.org/cidr2005/papers/P19.pdf)
 
-[X100中文翻译](https://github.com/caicancai/paper_reading_cn/tree/main/MonetDB)
+[X100中文翻译](https://github.com/caicancai/paper_reading_cn/tree/main/X100)
 
 ## Distributed systems
 
