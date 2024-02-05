@@ -36,7 +36,7 @@ CPU MHz改进的根本原因是芯片制造工艺规模的进步，通常每18�
 
 CPU MHz改进的根本原因是芯片制造工艺规模的进步，通常每18个月缩小1.4倍（也就是说，摩尔定律[13]）。每缩小一个制造规模，就意味着两倍（1.4的平方）的晶体管数量和两倍的晶体管尺寸，以及1.4倍的导线距离和信号延迟。因此，人们会期望CPU MHz随着反相信号的延迟而增加，但图1显示时钟速度甚至进一步增加。这主要是通过流水线来完成的：将CPU指令的工作划分为更多的阶段。每级工作量更少意味着CPU频率可以提高。虽然1988年的Intel 80386 CPU在一个（或多个）周期内执行一条指令，但1993年的Pentium已经有了5级流水线，在1999年的Pentium III中增加到14级，而2004年的Pentium 4有31级流水线。
 
-![Screenshot_36](C:\Users\PC-19\Documents\Lightshot\Screenshot_36.png)
+https://github.com/caicancai/paper_reading_cn/blob/main/X100/image/Screenshot_36.png
 
 
 
@@ -46,7 +46,7 @@ Piplines会带来两种危险：（i）如果一个指令需要前一指令的�
 
 现代CPU以不同的方式进行平衡。Intel Itanium 2处理器是一个VLIW（超大指令字）处理器，具有许多并行流水线（每周期最多可执行6条指令），只有很少（7）个阶段，因此时钟速度相对较低，为1.5GHz。相比之下，Pentium 4拥有非常长的31级流水线，允许3.6GHz的时钟速度，但每个周期只能执行3条指令。无论哪种方式，要达到理论上的最大吞吐量，Itanium 2在任何时候都需要7x6 = 42个独立指令，而Pentium 4需要31x3 = 93个。这种并行性并不总是能找到的，因此许多程序使用Itanium 2的资源要比Pentium 4好得多，这就解释了为什么在基准测试中，两种CPU的性能相似，尽管时钟速度相差很大。
 
-![Screenshot_37](C:\Users\PC-19\Documents\Lightshot\Screenshot_37.png)
+https://github.com/caicancai/paper_reading_cn/blob/main/X100/image/Screenshot_37.png
 
 大多数编程语言不要求程序员在程序中明确指定哪些指令（或表达式）是独立的，因此，编译器优化对于实现良好的CPU利用率至关重要。最重要的技术是循环流水线，其中由数组A的所有n个独立元素上的多个相关操作F()，G()组成的操作被转换为：
 
@@ -74,13 +74,13 @@ TPC-H基准测试运行在数据仓库上。1GB的房子，其大小可以通过
 
 在下文中，我们首先在关系数据库系统上分析Query 1的性能，然后在MonetDB/MIL上分析，最后在手工编码的程序中分析。
 
-![Screenshot_38](C:\Users\PC-19\Documents\Lightshot\Screenshot_38.png)
+https://github.com/caicancai/paper_reading_cn/blob/main/X100/image/Screenshot_38.png
 
 ### 3.1 Query 1 on Relational Database Systems
 
 从RDBMS的早期开始，查询执行功能是通过实现物理关系代数来提供的，通常遵循火山模型的流水线处理。然而，关系代数在其参数方面具有高度的自由度。例如，即使是一个简单的ScanSelect（R，B，P）也只在查询时接收输入关系R的格式（列的数量、它们的类型和记录偏移）、布尔选择表达式B（可以是任何形式）和定义输出关系的投影表达式P（每个具有任意复杂度）的列表的全部知识。为了处理所有可能的R、b和P，DBMS实现者实际上必须实现一个表达式解释器，它可以处理任意复杂度的表达式。
 
-![Screenshot_39](C:\Users\PC-19\Documents\Lightshot\Screenshot_39.png)
+https://github.com/caicancai/paper_reading_cn/blob/main/X100/image/Screenshot_39.png
 
 这种解释器的危险之一，特别是如果解释的粒度是元组，是“真实的工作”（即执行查询中找到的表达式）的成本只是总查询执行成本的一小部分。我们可以在表2中看到这种情况，表2显示了在SF=1的数据库上TPC-H Query 1的MySQL 4.1的gprof跟踪。第二列显示例程花费的总执行时间的百分比，不包括它调用的例程花费的时间（不包括）。第一列是第二列的累计和（cum.）。第三列列出例程被调用的次数，而第四列和第五列显示每次调用执行的平均指令数以及实现的IPC。
 
@@ -97,7 +97,7 @@ STOR dst,reg3
 
 这段代码中的限制因素是三个加载/存储指令，因此MIPS处理器每3个周期可以执行一个 *（double，double）。这与MySQL的#ins/Instruction-PerCycle（IPC）= 38/0.8 = 49周期的成本形成鲜明对比！这种高成本的一个解释是缺乏循环流水线。由于MySQL调用的例程每次调用只计算一个加法，而不是一个加法数组，因此编译器无法执行循环流水线。因此，加法由必须彼此等待的四个依赖指令组成。在平均指令延迟为5个周期的情况下，这解释了大约20个周期的成本。剩下的49个周期用于跳转到例程，以及推入和弹出堆栈。
 
-![Screenshot_40](C:\Users\PC-19\Documents\Lightshot\Screenshot_40.png)
+https://github.com/caicancai/paper_reading_cn/blob/main/X100/image/Screenshot_40.png
 
 MySQL每次执行表达式元组的策略的后果是双重的：
 
@@ -125,7 +125,7 @@ MySQL每次执行表达式元组的策略的后果是双重的：
 
 虽然在本文中，我们专注于主存场景中的CPU效率，但我们指出，MonetDB/MIL产生的“人为”高带宽使系统更难有效地扩展到基于磁盘的问题，这仅仅是因为内存带宽往往比I/O带宽大得多（也更便宜）。维持例如1.5GB/s的数据传输将需要具有大量磁盘的真正高端RAID系统。
 
-![Screenshot_41](C:\Users\PC-19\Documents\Lightshot\Screenshot_41.png)
+https://github.com/caicancai/paper_reading_cn/blob/main/X100/image/Screenshot_41.png
 
 ### 3.3 Query 1: Baseline Performance
 
@@ -246,4 +246,4 @@ MonetDB/X100以垂直分段的形式存储所有表。无论使用新的ColumnBM
 
 MonetDB/X100还支持简单的“汇总”索引，类似于[12]，如果列是集群（几乎排序），则使用该索引。这些汇总索引包含一个#rowId，即在基表中该点之前该列的运行最大值，以及一个非常粗粒度的最小值（默认大小为1000个条目，从基表中以固定间隔获取#rowids）。这些汇总索引可用于快速导出范围谓词的#rowId边界。再次注意，由于垂直片段是不可变的，因此它们上的索引实际上不需要维护。delta列应该很小并且在内存中，但没有索引，必须始终访问。
 
-![Screenshot_43](C:\Users\PC-19\Documents\Lightshot\Screenshot_43.png)
+https://github.com/caicancai/paper_reading_cn/blob/main/X100/image/Screenshot_43.png
