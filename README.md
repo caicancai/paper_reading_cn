@@ -114,7 +114,7 @@ Translation of some papers on big data and databases
 
 [mapleFU ](https://github.com/mapleFU)
 
-[victorchu](https://blog.victorchu.info/)
+[victorchu](https://github.com/chutian0610)
 
 [maemual](https://github.com/maemual)
 
