@@ -16,6 +16,9 @@ Translation of some papers on big data and databases
 
 [X100中文翻译](https://github.com/caicancai/paper_reading_cn/tree/main/X100)
 
+### What Goes Around Comes Around... And Around...
+[What Goes Around Comes Around... And Around...原文](https://db.cs.cmu.edu/papers/2024/whatgoesaround-sigmodrec2024.pdf)
+
 ## Distributed systems
 
 ### Raft
