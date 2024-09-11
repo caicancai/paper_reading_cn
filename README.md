@@ -19,6 +19,9 @@ Translation of some papers on big data and databases
 ### What Goes Around Comes Around... And Around...
 [What Goes Around Comes Around... And Around...原文](https://db.cs.cmu.edu/papers/2024/whatgoesaround-sigmodrec2024.pdf)
 
+### The Transaction Concept: Virtues and Limitations
+[The Transaction Concept:Virtues and Limitations](https://jimgray.azurewebsites.net/papers/thetransactionconcept.pdf)
+
 ## Distributed systems
 
 ### Raft
